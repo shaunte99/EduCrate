@@ -1,0 +1,92 @@
+/* General */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: #fff;
+}
+
+/* Hero / Login Section */
+.login-hero {
+  position: relative;
+  height: 100vh;
+  background-image: url('../images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-hero .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.login-container {
+  position: relative;
+  z-index: 1;
+  background: rgba(255,255,255,0.95);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-container h1 {
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+  color: #0A1F44;
+}
+
+.login-container .subtitle {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.login-container form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.login-container .btn.filled {
+  background-color: #FFCC00;
+  color: #000;
+  border: none;
+  padding: 12px 20px;
+  width: 100%;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-container .btn.filled:hover {
+  background-color: #e6b800;
+}
+
+.back-link {
+  margin-top: 15px;
+}
+
+.back-link a {
+  text-decoration: none;
+  color: #0A1F44;
+  font-weight: 500;
+}
+
+.error-msg {
+  color: red;
+  font-size: 12px;
+  margin-top: -12px;
+  margin-bottom: 10px;
+}
