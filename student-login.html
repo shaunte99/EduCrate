@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find My Student | EduCrate</title>
+  <link rel="stylesheet" href="styles/student-login.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Hero / Login Section -->
+  <section class="login-hero">
+    <div class="overlay"></div>
+    <div class="login-container">
+      <h1>Find My Student</h1>
+      <p class="subtitle">Enter the student ID and shared email address</p>
+      <form id="loginForm" novalidate>
+        <input type="text" name="studentId" placeholder="Student ID" required />
+        <input type="email" name="email" placeholder="Shared Email" required />
+        <button type="submit" class="btn filled">Find My Student</button>
+      </form>
+      <p class="back-link"><a href="index.html">← Back to Home</a></p>
+    </div>
+  </section>
+
+  <script src="scripts/student-login.js"></script>
+</body>
+</html>
