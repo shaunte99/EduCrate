@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: #fff;
+}
+
+/* Navbar (already in your global styles, kept for reference) */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #0A1F44;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+/* Profile Main Layout */
+.profile-main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Profile Header */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 3px solid #FFCC00;
+}
+
+.profile-info h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #0A1F44;
+}
+
+.profile-info .grade,
+.profile-info .email {
+  margin: 5px 0;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Profile Details */
+.profile-details {
+  margin-top: 2rem;
+}
+
+.profile-details h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #0A1F44;
+  border-left: 4px solid #FFCC00;
+  padding-left: 10px;
+}
+
+/* Subjects List */
+.subjects-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.subjects-list li {
+  background: #0A1F44;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Teacher Contact */
+.teacher-contact {
+  background: #fdfdfd;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 2rem;
+}
+
+.teacher-contact a {
+  color: #0A1F44;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.teacher-note {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #555;
+}
+
+/* Academic Progress */
+.progress-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.progress-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.progress-card h3 {
+  margin-top: 0;
+  color: #0A1F44;
+}
+
+.progress-card p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+/* Meeting Form */
+.meeting-form {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.meeting-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #0A1F44;
+}
+
+.meeting-form input,
+.meeting-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+}
+
+.meeting-form button {
+  display: inline-block;
+}
+
+/* Footer */
+.footer {
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+  background-color: #000;
+  color: white;
+  text-align: center;
+}
