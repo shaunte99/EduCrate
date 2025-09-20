@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kayla Arikanna - Student Profile | EduCrate</title>
+  <link rel="stylesheet" href="styles/kayla-profile.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/Logo.jpg" alt="EduCrate Logo" />
+      <span>EduCrate</span>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#" class="active">Student Profile</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Profile Main -->
+  <main class="profile-main">
+    <!-- Profile Header -->
+    <section class="profile-header">
+      <img src="images/kayla.jpg" alt="Kayla Arikanna" class="profile-pic" />
+      <div class="profile-info">
+        <h1>Kayla Arikanna</h1>
+        <p class="grade">Grade 10</p>
+        <p class="email">kayla@student.educrate.com</p>
+      </div>
+    </section>
+
+    <!-- Profile Details -->
+    <section class="profile-details">
+      <!-- Subjects -->
+      <h2>Subjects</h2>
+      <ul class="subjects-list">
+        <li>Afrikaans</li>
+        <li>English</li>
+        <li>Mathematics</li>
+        <li>Life Sciences</li>
+        <li>History</li>
+        <li>Physical Education</li>
+      </ul>
+
+      <!-- Teacher Contact -->
+      <h2>Class Teacher</h2>
+      <div class="teacher-contact">
+        <p><strong>Mr. Johan van der Merwe</strong></p>
+        <p>Email: <a href="mailto:johan.vdmerwe@educrate.com">johan.vdmerwe@educrate.com</a></p>
+        <p>Phone: +27 11 555 1234</p>
+        <p class="teacher-note">
+          Kayla is a dedicated student showing steady progress in all her subjects. She actively participates in class and is encouraged to keep developing her leadership skills.
+        </p>
+      </div>
+
+      <!-- Academic Progress -->
+      <h2>Academic Progress</h2>
+      <div class="progress-cards">
+        <div class="progress-card">
+          <h3>Mathematics</h3>
+          <p><strong>Current Grade:</strong> 78%</p>
+          <p><em>Comments:</em> Strong analytical skills; needs to practice problem-solving more.</p>
+        </div>
+        <div class="progress-card">
+          <h3>Afrikaans</h3>
+          <p><strong>Current Grade:</strong> 85%</p>
+          <p><em>Comments:</em> Excellent grasp of language and grammar.</p>
+        </div>
+        <div class="progress-card">
+          <h3>Life Sciences</h3>
+          <p><strong>Current Grade:</strong> 80%</p>
+          <p><em>Comments:</em> Shows great curiosity and understanding of biological concepts.</p>
+        </div>
+      </div>
+
+      <!-- Meeting Form -->
+      <h2>Request a Meeting with Class Teacher</h2>
+      <form class="meeting-form" action="#" method="POST">
+        <label for="meeting-date">Preferred Meeting Date:</label>
+        <input type="date" id="meeting-date" name="meeting-date" required />
+
+        <label for="meeting-message">Message:</label>
+        <textarea id="meeting-message" name="meeting-message" rows="4" placeholder="Write a message for the teacher..." required></textarea>
+
+        <button type="submit" class="btn filled">Request Meeting</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 EduCrate | Empowering Education Everywhere</p>
+  </footer>
+
+  <script src="scripts/kayla-profile.js"></script>
+</body>
+</html>
