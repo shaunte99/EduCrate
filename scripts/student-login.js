@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
       {
         id: 'KAYLA1022',
         email: 'kayla@student.educrate.com',
-        profilePage: 'kayla-profile.html'
+        profilePage: 'profile.html'
       }
     ];
 
