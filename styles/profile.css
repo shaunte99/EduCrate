@@ -431,3 +431,45 @@ a:hover {
     justify-content: center;
   }
 }
+
+/* Assignments & Weekly Summary */
+.assignments-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+}
+
+.assignment-item {
+  background: #fff;
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.8rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.assignment-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.weekly-summary p {
+  background: #f5f8ff;
+  padding: 1rem 1.2rem;
+  border-left: 4px solid #FFCC00;
+  margin-bottom: 0.8rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+.parent-notices {
+  background: #fff4e5;
+  padding: 1rem 1.5rem;
+  border-left: 5px solid #FFCC00;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+
+
