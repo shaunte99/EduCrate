@@ -19,24 +19,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const meetingForm = document.querySelector('.modal form');
 
   if (meetingBtn && modalBg && meetingForm && modalCloseBtn) {
-    // Open modal
     meetingBtn.addEventListener('click', () => {
       modalBg.classList.add('show');
     });
 
-    // Close modal function
     function closeModal() {
       modalBg.classList.remove('show');
       meetingForm.reset();
     }
 
-    // Close modal events
     modalCloseBtn.addEventListener('click', closeModal);
     modalBg.addEventListener('click', e => {
       if (e.target === modalBg) closeModal();
     });
 
-    // Form submission with validation
     meetingForm.addEventListener('submit', e => {
       e.preventDefault();
       const meetingDate = meetingForm['meeting-date'].value;
@@ -57,7 +53,50 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ------------------------
-  // Optional: Floating Button Animation (if you want)
+  // Assignment Tracker
+  // ------------------------
+  const assignments = [
+    { subject: "Mathematics", title: "Algebra Homework", due: "2025-09-30", status: "Submitted", grade: "75%" },
+    { subject: "History", title: "Essay on World War II", due: "2025-10-02", status: "Pending", grade: "-" },
+    { subject: "Life Sciences", title: "Lab Report - Cells", due: "2025-10-05", status: "Graded", grade: "88%" },
+  ];
+
+  const assignmentContainer = document.querySelector('.assignments-list');
+  if (assignmentContainer) {
+    assignments.forEach(a => {
+      const li = document.createElement('li');
+      li.className = "assignment-item";
+      li.innerHTML = `
+        <strong>${a.subject}</strong>: ${a.title}<br/>
+        <span>Due: ${a.due}</span> | 
+        <span>Status: ${a.status}</span> | 
+        <span>Grade: ${a.grade}</span>
+      `;
+      assignmentContainer.appendChild(li);
+    });
+  }
+
+  // ------------------------
+  // Weekly Summary
+  // ------------------------
+  const weeklySummary = {
+    Mathematics: "Covered quadratic equations and practiced graph plotting.",
+    English: "Focused on essay writing techniques and comprehension.",
+    LifeSciences: "Studied photosynthesis and cellular respiration.",
+    History: "Analyzed key events of the Cold War.",
+  };
+
+  const summaryContainer = document.querySelector('.weekly-summary');
+  if (summaryContainer) {
+    Object.keys(weeklySummary).forEach(subject => {
+      const p = document.createElement('p');
+      p.innerHTML = `<strong>${subject}:</strong> ${weeklySummary[subject]}`;
+      summaryContainer.appendChild(p);
+    });
+  }
+
+  // ------------------------
+  // Pulse Animation for Floating Button
   // ------------------------
   const pulseButton = () => {
     if (!meetingBtn) return;
