@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kayla Arikanna | Student Dashboard</title>
+  <link rel="stylesheet" href="styles/dashboard.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="EduCrate Logo" />
+      <span>EduCrate</span>
+    </div>
+    <div class="nav-links">
+      <a href="#">Dashboard</a>
+      <a href="#">Assignments</a>
+      <a href="#">Progress</a>
+      <a href="#">Resources</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn outline">Logout</button>
+    </div>
+  </nav>
+
+  <!-- Profile Header -->
+  <section class="profile-header">
+    <img src="kayla.jpg" alt="Kayla Arikanna" class="profile-pic">
+    <div class="profile-info">
+      <h1>Kayla Arikanna</h1>
+      <div class="grade">Grade 11</div>
+      <div class="email">kayla.arikanna@student.educrate.com</div>
+    </div>
+  </section>
+
+  <!-- Main Dashboard -->
+  <main class="dashboard-main">
+    
+    <!-- Progress Section -->
+    <section class="dashboard-section">
+      <h2>My Progress</h2>
+      <div class="progress-cards">
+        <div class="progress-card">
+          <h3>Mathematics</h3>
+          <div class="progress-bar"><div class="progress-bar-fill" data-percentage="88%"></div></div>
+          <div class="progress-comments">Solid improvement this term!</div>
+        </div>
+        <div class="progress-card">
+          <h3>Science</h3>
+          <div class="progress-bar"><div class="progress-bar-fill" data-percentage="92%"></div></div>
+          <div class="progress-comments">Excellent understanding of concepts.</div>
+        </div>
+        <div class="progress-card">
+          <h3>English</h3>
+          <div class="progress-bar"><div class="progress-bar-fill" data-percentage="85%"></div></div>
+          <div class="progress-comments">Focus on writing assignments for top marks.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Assignments Section -->
+    <section class="dashboard-section">
+      <h2>Assignments</h2>
+      <ul class="assignments-list">
+        <li>
+          <span>Mathematics - Algebra Homework</span>
+          <button class="btn outline mark-done">Mark as Done</button>
+        </li>
+        <li>
+          <span>Science - Lab Report</span>
+          <button class="btn outline mark-done">Mark as Done</button>
+        </li>
+        <li>
+          <span>English - Essay Draft</span>
+          <button class="btn outline mark-done">Mark as Done</button>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Attendance / Streaks -->
+    <section class="dashboard-section">
+      <h2>Attendance & Streaks</h2>
+      <div class="streaks-cards">
+        <div class="streak-card">
+          <h3>Attendance</h3>
+          <div class="progress-bar"><div class="progress-bar-fill" data-percentage="95%"></div></div>
+        </div>
+        <div class="streak-card">
+          <h3>Homework Streak</h3>
+          <div class="progress-bar"><div class="progress-bar-fill" data-percentage="10d"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements & Badges -->
+    <section class="dashboard-section">
+      <h2>Achievements & Badges</h2>
+      <div class="badges-list">
+        <div class="badge">Math Whiz 🧮</div>
+        <div class="badge">Science Star 🔬</div>
+        <div class="badge">Perfect Attendance 🎯</div>
+      </div>
+    </section>
+
+    <!-- Personal Notes / Journal -->
+    <section class="dashboard-section">
+      <h2>Personal Notes</h2>
+      <textarea placeholder="Write your goals or notes here..."></textarea>
+    </section>
+
+    <!-- Study Resources -->
+    <section class="dashboard-section">
+      <h2>Study Resources</h2>
+      <ul class="resources-list">
+        <li><a href="#">Mathematics Practice PDF</a></li>
+        <li><a href="#">Science Experiment Videos</a></li>
+        <li><a href="#">English Essay Tips</a></li>
+      </ul>
+    </section>
+    
+  </main>
+
+  <footer class="footer">
+    EduCrate &copy; 2025
+  </footer>
+
+  <script src="scripts/dashboard.js"></script>
+</body>
+</html>
