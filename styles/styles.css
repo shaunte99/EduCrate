@@ -93,7 +93,7 @@ body {
 .hero {
   position: relative;
   height: 90vh;
-  background-image: url('../images/hero.jpg');
+  background-image: url('../images/EduHero.png');
   background-size: cover;
   background-position: center;
   color: white;
@@ -180,3 +180,4 @@ body {
   color: white;
   text-align: center;
 }
+
