@@ -1,78 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kayla's Dashboard | EduCrate</title>
-  <link rel="stylesheet" href="styles/dashboard.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kayla’s Dashboard | EduCrate</title>
+  <link rel="stylesheet" href="styles/dashboard.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo">
-      <img src="images/eedu.png" alt="EduCrate Logo">
+      <img src="images/eedu.png" alt="EduCrate Logo" />
       <span>EduCrate</span>
     </div>
     <nav class="nav-links">
-      <a href="dashboard.html" class="active">Dashboard</a>
-      <a href="subjects.html">Subjects</a>
-      <a href="study-material.html">Study Material</a>
-      <a href="quizzes.html">Quizzes</a>
-      <a href="tutors.html">Tutors</a>
-      <a href="messages.html">Messages</a>
+      <a href="student-dashboard.html" class="active">Dashboard</a>
+      <a href="profile.html">Profile</a>
+      <a href="materials.html">Study Materials</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <!-- Dashboard Main -->
+  <!-- Dashboard Overview -->
   <main class="dashboard-main">
-    <!-- Welcome Card -->
-    <section class="welcome-card">
-      <h1>Welcome back, Kayla!</h1>
-      <p>Here’s your performance snapshot and upcoming tasks.</p>
-    </section>
-
-    <!-- Performance Cards -->
-    <section class="performance-cards">
+    <section class="overview-cards">
       <div class="card">
-        <h3>GPA</h3>
-        <p>3.8 / 4.0</p>
+        <h3>Average Grade</h3>
+        <p id="avg-grade">-</p>
+      </div>
+      <div class="card">
+        <h3>Assignments Due</h3>
+        <p id="assignments-due">-</p>
+      </div>
+      <div class="card">
+        <h3>Pending Quizzes</h3>
+        <p id="quizzes-due">-</p>
       </div>
       <div class="card">
         <h3>Attendance</h3>
-        <p>95%</p>
-      </div>
-      <div class="card">
-        <h3>Upcoming Deadlines</h3>
-        <p>Math Quiz - Sep 25</p>
-      </div>
-      <div class="card">
-        <h3>Achievements</h3>
-        <p>Perfect Attendance Badge</p>
+        <p id="attendance">-</p>
       </div>
     </section>
 
-    <!-- Quick Links -->
-    <section class="quick-links">
-      <h2>Quick Access</h2>
-      <div class="links-grid">
-        <a href="subjects.html" class="btn filled">Subjects</a>
-        <a href="study-material.html" class="btn filled">Study Material</a>
-        <a href="quizzes.html" class="btn filled">Quizzes</a>
-        <a href="tutors.html" class="btn filled">Tutors</a>
+    <!-- Academic Progress -->
+    <section class="academic-progress">
+      <h2>Academic Progress</h2>
+      <div class="progress-cards">
+        <!-- JS will populate subject progress -->
       </div>
     </section>
 
-    <!-- Notifications -->
-    <section class="notifications">
-      <h2>Notifications</h2>
-      <ul>
-        <li> Math Quiz feedback received</li>
-        <li> Your History essay was graded: 88%</li>
-        <li> Life Sciences tutor available this week</li>
-      </ul>
+    <!-- Assignments & Quizzes -->
+    <section class="trackers">
+      <div class="assignments">
+        <h2>Assignments Tracker</h2>
+        <ul class="assignments-list"></ul>
+      </div>
+      <div class="quizzes">
+        <h2>Practice Quizzes</h2>
+        <ul class="quizzes-list"></ul>
+      </div>
+    </section>
+
+    <!-- Study Materials -->
+    <section class="study-materials">
+      <h2>Study Materials</h2>
+      <div class="materials-grid">
+        <!-- JS will populate -->
+      </div>
+    </section>
+
+    <!-- Weekly Summary -->
+    <section class="weekly-summary-section">
+      <h2>Weekly Summary</h2>
+      <div class="weekly-summary"></div>
+    </section>
+
+    <!-- Teacher Contact / Book Tutor -->
+    <section class="teacher-contact">
+      <h2>Contact Teacher / Book Tutor</h2>
+      <div class="teacher-card">
+        <p><strong>Mr. Johan van der Merwe</strong></p>
+        <p>Email: <a href="mailto:johan.vdmerwe@educrate.com">johan.vdmerwe@educrate.com</a></p>
+        <p>Phone: +27 11 555 1234</p>
+        <button class="btn filled" id="book-tutor">Book a Tutor</button>
+      </div>
     </section>
   </main>
 
