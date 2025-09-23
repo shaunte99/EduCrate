@@ -5,6 +5,7 @@ body {
   color: #222;
 }
 
+/* Navbar */
 .navbar {
   position: sticky;
   top: 0;
@@ -13,113 +14,137 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
   z-index: 999;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #fff;
-  font-weight: 800;
-  font-size: 1.4rem;
-}
-
-.logo img {
-  height: 40px;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
 }
 
 .nav-links a {
-  text-decoration: none;
   color: #fff;
+  text-decoration: none;
   font-weight: 500;
-  position: relative;
-  padding: 5px 0;
+  margin-left: 1.5rem;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
 }
 
 .nav-links a.active,
 .nav-links a:hover {
-  color: #FFCC00;
+  border-bottom: 2px solid #FFCC00;
 }
 
+/* Dashboard Cards */
 .dashboard-main {
   max-width: 1200px;
-  margin: 3rem auto;
+  margin: 2rem auto;
   padding: 0 1.2rem;
 }
 
-.welcome-card {
-  background: linear-gradient(135deg, #0A1F44cc, #FFCC0050);
-  color: white;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(10,31,68,0.15);
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.performance-cards {
+.overview-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
-.performance-cards .card {
+.card {
   background: #fff;
-  padding: 1.5rem;
-  border-radius: 14px;
+  padding: 1.8rem 1.5rem;
+  border-radius: 16px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.08);
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.performance-cards .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+.card h3 {
+  margin: 0 0 0.5rem;
+  color: #0A1F44;
 }
 
-.quick-links .links-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+.card p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFCC00;
+}
+
+/* Academic Progress */
+.progress-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
   margin-top: 1rem;
 }
 
-.btn.filled {
-  background: #FFCC00;
-  color: #000;
-  padding: 0.8rem 1.2rem;
-  border-radius: 10px;
-  font-weight: 700;
-  text-decoration: none;
-  text-align: center;
+.progress-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
-.btn.filled:hover {
-  background: #ffd633;
+.progress-card h3 {
+  margin: 0 0 0.8rem;
+  color: #0A1F44;
 }
 
-.notifications ul {
+.progress-bar {
+  height: 14px;
+  background: #e6eaf2;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #0A1F44, #FFCC00);
+  border-radius: 12px 0 0 12px;
+  transition: width 1.4s ease-in-out;
+}
+
+/* Assignments & Quizzes */
+.assignments-list,
+.quizzes-list {
   list-style: none;
   padding-left: 0;
 }
 
-.notifications li {
-  background: #fff4e5;
-  padding: 1rem 1.2rem;
-  border-left: 5px solid #FFCC00;
+.assignment-item,
+.quiz-item {
+  background: #fff;
+  padding: 1rem 1.5rem;
   margin-bottom: 0.8rem;
-  border-radius: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
+/* Study Materials */
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.material-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease;
+}
+
+.material-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Teacher Contact */
+.teacher-card {
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  max-width: 400px;
+}
+
+/* Footer */
 .footer {
   text-align: center;
   padding: 1.5rem 0;
@@ -127,15 +152,5 @@ body {
   background-color: #0A1F44;
   color: white;
   margin-top: 3rem;
-}
-
-@media (max-width: 720px) {
-  .performance-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .quick-links .links-grid {
-    flex-direction: column;
-  }
 }
 
