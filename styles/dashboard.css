@@ -1,8 +1,25 @@
+/* Base */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #f9fbff;
   color: #222;
+  background: #f9fbff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: #FFCC00;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ffd633;
 }
 
 /* Navbar */
@@ -14,31 +31,67 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  z-index: 999;
   box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+  z-index: 999;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .nav-links a {
-  color: #fff;
   text-decoration: none;
+  color: #fff;
   font-weight: 500;
-  margin-left: 1.5rem;
-  padding-bottom: 2px;
-  border-bottom: 2px solid transparent;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #FFCC00;
+  transition: width 0.3s ease;
 }
 
 .nav-links a.active,
 .nav-links a:hover {
-  border-bottom: 2px solid #FFCC00;
+  color: #FFCC00;
 }
 
-/* Dashboard Cards */
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* Dashboard Main */
 .dashboard-main {
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1.2rem;
 }
 
+/* Overview Cards */
 .overview-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -48,10 +101,16 @@ body {
 
 .card {
   background: #fff;
-  padding: 1.8rem 1.5rem;
+  padding: 1.8rem 2rem;
   border-radius: 16px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.08);
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
 .card h3 {
@@ -66,6 +125,15 @@ body {
 }
 
 /* Academic Progress */
+.academic-progress h2 {
+  font-weight: 800;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #0A1F44;
+  border-bottom: 4px solid #FFCC00;
+  padding-bottom: 6px;
+}
+
 .progress-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -75,13 +143,20 @@ body {
 
 .progress-card {
   background: #fff;
-  padding: 1.5rem;
+  padding: 1.8rem 2rem;
   border-radius: 16px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.progress-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
 .progress-card h3 {
-  margin: 0 0 0.8rem;
+  margin: 0 0 1rem;
+  font-weight: 800;
   color: #0A1F44;
 }
 
@@ -90,6 +165,8 @@ body {
   background: #e6eaf2;
   border-radius: 12px;
   overflow: hidden;
+  margin-bottom: 12px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .progress-bar-fill {
@@ -101,22 +178,48 @@ body {
 }
 
 /* Assignments & Quizzes */
-.assignments-list,
-.quizzes-list {
+.assignments, .quizzes {
+  margin-top: 3rem;
+}
+
+.assignments h2, .quizzes h2 {
+  font-weight: 800;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #0A1F44;
+  border-bottom: 3px solid #FFCC00;
+  padding-bottom: 5px;
+}
+
+.assignments-list, .quizzes-list {
   list-style: none;
   padding-left: 0;
 }
 
-.assignment-item,
-.quiz-item {
+.assignment-item, .quiz-item {
   background: #fff;
   padding: 1rem 1.5rem;
   margin-bottom: 0.8rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.assignment-item:hover, .quiz-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 /* Study Materials */
+.study-materials h2 {
+  font-weight: 800;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #0A1F44;
+  border-bottom: 3px solid #FFCC00;
+  padding-bottom: 5px;
+}
+
 .materials-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -125,23 +228,81 @@ body {
 
 .material-card {
   background: #fff;
-  padding: 1rem;
+  padding: 1rem 1.2rem;
   border-radius: 14px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .material-card:hover {
   transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-/* Teacher Contact */
-.teacher-card {
+/* Weekly Summary */
+.weekly-summary-section h2 {
+  font-weight: 800;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #0A1F44;
+  border-bottom: 3px solid #FFCC00;
+  padding-bottom: 5px;
+}
+
+.weekly-summary p {
+  background: #f5f8ff;
+  padding: 1rem 1.2rem;
+  border-left: 4px solid #FFCC00;
+  margin-bottom: 0.8rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+/* Teacher Contact / Book Tutor */
+.teacher-contact {
   background: #fff;
+  border-left: 5px solid #FFCC00;
   padding: 1.5rem 2rem;
   border-radius: 16px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-  max-width: 400px;
+  max-width: 450px;
+  margin-top: 2rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.teacher-contact:hover {
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.teacher-contact strong {
+  font-size: 1.2rem;
+  color: #0A1F44;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.teacher-contact a {
+  font-weight: 600;
+  color: #0A1F44;
+}
+
+.btn {
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px 22px;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn.filled {
+  background: #0A1F44;
+  color: #fff;
+}
+
+.btn.filled:hover {
+  background: #17336d;
 }
 
 /* Footer */
@@ -151,6 +312,23 @@ body {
   font-weight: 600;
   background-color: #0A1F44;
   color: white;
-  margin-top: 3rem;
+  margin-top: 5rem;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .overview-cards, .progress-cards, .materials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .teacher-contact {
+    max-width: 100%;
+  }
 }
 
