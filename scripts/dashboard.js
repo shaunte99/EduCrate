@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+ document.addEventListener('DOMContentLoaded', () => {
   // ------------------------
   // Academic Progress
   // ------------------------
@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
     progressContainer.appendChild(card);
   });
 
-  // Animate Progress Bars
   const progressFills = document.querySelectorAll('.progress-bar-fill');
   progressFills.forEach(bar => {
     const grade = bar.getAttribute('data-grade');
@@ -57,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const assignmentContainer = document.querySelector('.assignments-list');
   assignments.forEach(a => {
     const li = document.createElement('li');
-    li.className = 'assignment-item';
+    li.className = `assignment-item ${a.status.toLowerCase()}`;
     li.innerHTML = `<strong>${a.subject}</strong>: ${a.title} | Due: ${a.due} | Status: ${a.status} | Grade: ${a.grade}`;
     assignmentContainer.appendChild(li);
   });

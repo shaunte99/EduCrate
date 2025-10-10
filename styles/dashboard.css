@@ -8,8 +8,6 @@ body {
   font-family: 'Poppins', sans-serif;
   color: #222;
   background: #f9fbff;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -60,7 +58,6 @@ a:hover {
   font-weight: 500;
   position: relative;
   padding: 5px 0;
-  transition: color 0.3s ease;
 }
 
 .nav-links a::after {
@@ -82,6 +79,37 @@ a:hover {
 .nav-links a:hover::after,
 .nav-links a.active::after {
   width: 100%;
+}
+
+/* Profile Header */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info h1 {
+  margin: 0 0 0.4rem;
+  font-size: 1.8rem;
+  color: #0A1F44;
+}
+
+.profile-info p {
+  margin: 0;
+  color: #555;
 }
 
 /* Dashboard Main */
@@ -146,12 +174,6 @@ a:hover {
   padding: 1.8rem 2rem;
   border-radius: 16px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.progress-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
 .progress-card h3 {
@@ -166,7 +188,6 @@ a:hover {
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 12px;
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .progress-bar-fill {
@@ -202,12 +223,18 @@ a:hover {
   margin-bottom: 0.8rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.assignment-item:hover, .quiz-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+.assignment-item.pending {
+  border-left: 5px solid #FF9900;
+}
+
+.assignment-item.submitted {
+  border-left: 5px solid #00b300;
+}
+
+.assignment-item.graded {
+  border-left: 5px solid #0A1F44;
 }
 
 /* Study Materials */
@@ -231,12 +258,16 @@ a:hover {
   padding: 1rem 1.2rem;
   border-radius: 14px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.material-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+.material-card h4 {
+  margin: 0 0 0.4rem;
+  color: #0A1F44;
+}
+
+.material-card a {
+  margin-top: 0.5rem;
+  display: inline-block;
 }
 
 /* Weekly Summary */
@@ -267,11 +298,6 @@ a:hover {
   box-shadow: 0 5px 20px rgba(0,0,0,0.08);
   max-width: 450px;
   margin-top: 2rem;
-  transition: box-shadow 0.3s ease;
-}
-
-.teacher-contact:hover {
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
 .teacher-contact strong {
@@ -293,7 +319,6 @@ a:hover {
   cursor: pointer;
   border: none;
   font-size: 1rem;
-  transition: background-color 0.3s ease;
 }
 
 .btn.filled {
@@ -323,7 +348,7 @@ a:hover {
     padding: 1rem;
   }
 
-  .overview-cards, .progress-cards, .materials-grid {
+  .overview-cards, .progress-cards, .materials-grid, .profile-header {
     grid-template-columns: 1fr;
   }
 
@@ -331,4 +356,5 @@ a:hover {
     max-width: 100%;
   }
 }
+
 
