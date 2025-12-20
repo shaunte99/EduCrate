@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BrightPath | Transport Services</title>
+
+  <!-- main site styles (keeps the site vibe) -->
+  <link rel="stylesheet" href="styles/styles.css">
+
+  <!-- transport-specific styles -->
+  <link rel="stylesheet" href="styles/transport.css">
+
+  <!-- Google Maps: replace YOUR_API_KEY with your real key if you have one -->
+  <!-- If you don't have a key yet it's fine — the page will still run the simulation map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <img src="images/IMG-20251020-WA0029.jpg" alt="BrightPath Logo" class="logo-img">
+        <span class="bright">Bright</span><span class="path">Path</span>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="transport.html" class="active">Transport Service</a></li>
+          <li><a href="episodes.html">Brighty's Adventures</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="tutors.html" class="cta-btn">Book a Tutor</a>
+      <div class="mobile-menu-icon">&#9776;</div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero transport-hero">
+    <div class="container hero-container">
+      <div class="hero-text">
+        <h1>BrightPath Transport</h1>
+        <p>Safe, reliable student transport with real-time tracking for parents. School pickups, after-school runs, event shuttles, and one-time trips.</p>
+      </div>
+      <div class="hero-image">
+        <img src="images/transport-illustration.png" alt="Transport illustration" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES + TRACKER LAYOUT -->
+  <main class="container transport-main">
+
+    <section class="services-grid">
+      <h2>Our Transport Services</h2>
+      <div class="services-cards">
+        <div class="service-card">
+          <div class="icon">🚌</div>
+          <h3>School Pickup & Dropoff</h3>
+          <p>Daily routes from partnered schools with monitored drivers and scheduled routes.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">⏰</div>
+          <h3>After-School Transport</h3>
+          <p>Flexible drop-off times and safe handover to parents or guardians.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">🎉</div>
+          <h3>Event & Weekend Trips</h3>
+          <p>Transport for school events, excursions, and weekend activities. Book per trip.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">📍</div>
+          <h3>Private One-time Trips</h3>
+          <p>Single or ad-hoc bookings for special needs, interviews, or private commutes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="tracker-area">
+      <div class="tracker-left">
+        <div class="map-card">
+          <div id="map" class="map"></div>
+          <div class="map-legend">
+            <div><span class="dot driver"></span> Driver</div>
+            <div><span class="dot pickup"></span> Pickup</div>
+            <div><span class="dot dropoff"></span> Dropoff</div>
+          </div>
+        </div>
+
+        <div class="driver-card">
+          <div class="driver-top">
+            <div class="driver-photo">👨‍✈️</div>
+            <div>
+              <h4 id="driver-name">Driver: T. Mokoena</h4>
+              <div class="driver-meta">Vehicle: Toyota Quantum · Reg: BXY 123 GP</div>
+            </div>
+          </div>
+
+          <div class="driver-stats">
+            <div><strong id="eta">ETA</strong><span id="eta-val">—</span></div>
+            <div><strong id="distance">Distance</strong><span id="distance-val">—</span></div>
+          </div>
+
+          <div class="driver-actions">
+            <button id="startTripBtn" class="btn-primary">Start Trip (simulate)</button>
+            <button id="stopTripBtn" class="btn-secondary">Stop Trip</button>
+          </div>
+
+          <div class="trip-log">
+            <h5>Trip Log</h5>
+            <ul id="tripLog"></ul>
+          </div>
+        </div>
+      </div>
+
+      <aside class="tracker-right">
+        <div class="booking-prototype">
+          <h3>Track Transport</h3>
+          <form id="transportRequestForm">
+            <label>Service type</label>
+            <select id="serviceType" required>
+              <option value="school">School Pickup</option>
+              <option value="after">After-school</option>
+              <option value="event">Event Shuttle</option>
+              <option value="private">Private Trip</option>
+            </select>
+
+            <label>Pickup address</label>
+            <input id="pickup" type="text" placeholder="Enter pickup address" required>
+
+            <label>Dropoff address</label>
+            <input id="dropoff" type="text" placeholder="Enter dropoff address" required>
+
+            <div class="two-cols">
+              <div>
+                <label>Date</label>
+                <input id="tripDate" type="date" required>
+              </div>
+              <div>
+                <label>Time</label>
+                <input id="tripTime" type="time" required>
+              </div>
+            </div>
+
+            <label>Student name</label>
+            <input id="studentName" type="text" placeholder="Learner full name" required>
+
+            <label>Parent phone</label>
+            <input id="parentPhone" type="tel" placeholder="" required>
+
+            <button type="submit" class="btn-primary">Send Request</button>
+            <p id="requestMessage" class="booking-message"></p>
+          </form>
+        </div>
+
+        <div class="notes-card">
+          <h4>How tracking works</h4>
+          <ol>
+            <li>Driver taps Start Trip on their device (simulated here).</li>
+            <li>Live marker updates on the map and ETA refreshes.</li>
+            <li>Stop Trip ends the session and stores the trip in the log.</li>
+          </ol>
+          <p class="muted">When you're ready for production we wire this to a driver mobile page + Firebase / Supabase and you get real GPS updates.</p>
+        </div>
+      </aside>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-logo">
+        <img src="images/IMG-20251020-WA0029.jpg" alt="BrightPath Logo" class="logo-img">
+        <span class="bright">Bright</span><span class="path">Path</span>
+        <p>Guiding learners to success</p>
+        <p class="designed-by">Designed by WebCrate</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="transport.html">Transport</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: brightpathaftercare@gmail.com</p>
+        <p>Phone: 084 532 5730</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/transport.js" defer></script>
+</body>
+</html>

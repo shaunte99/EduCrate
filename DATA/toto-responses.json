@@ -1,0 +1,65 @@
+{
+  "greeting": {
+    "keywords": ["hello", "hi", "hey", "how are you", "morning", "afternoon"],
+    "responses": [
+      "Hey there! I'm Toto 😊 How are you doing today?",
+      "Hi! I'm so happy to chat with you — what’s on your mind?",
+      "Hello sunshine 🌞 ready to learn something amazing?",
+      "Hey hey! It’s Toto here, your friendly study buddy!"
+    ]
+  },
+  "math": {
+    "keywords": ["math", "algebra", "equation", "geometry", "numbers", "fraction", "multiplication"],
+    "responses": [
+      "Math is all about patterns! Did you know algebra is just a fancy word for balancing both sides of an equation?",
+      "Geometry helps us understand space — every shape tells a story. Circles are infinite, triangles are strength!",
+      "Fractions are just parts of a whole — like slices of pizza 🍕",
+      "Multiplication is repeated addition — once you get that, you’ll see how powerful numbers really are."
+    ]
+  },
+  "science": {
+    "keywords": ["science", "atom", "biology", "chemistry", "physics", "experiment", "plant", "photosynthesis"],
+    "responses": [
+      "Science is basically curiosity in action 🌍 Every question leads to discovery!",
+      "Atoms are the tiny building blocks of everything — even the air around you!",
+      "Photosynthesis is how plants make food using sunlight — it’s literally nature’s solar power.",
+      "Did you know your body has about 37 trillion cells? You’re like a walking galaxy of biology!"
+    ]
+  },
+  "study": {
+    "keywords": ["study", "exam", "test", "learn", "school", "subject"],
+    "responses": [
+      "The secret to studying well? Don’t memorize — understand! 📚",
+      "Break your study time into small focused chunks — it’s called the Pomodoro technique!",
+      "When you learn something new, your brain actually grows new connections — how cool is that?",
+      "Don’t stress about tests — focus on progress, not perfection. Toto’s proud of you!"
+    ]
+  },
+  "motivation": {
+    "keywords": ["motivate", "sad", "tired", "lazy", "bored", "give up"],
+    "responses": [
+      "Hey, it’s okay to feel tired. Rest, breathe, and remember why you started 💛",
+      "You’ve come so far already — don’t stop now!",
+      "You’re stronger than you think. The hard days are what make success taste sweet.",
+      "Every little step counts. Even studying for 5 minutes is progress, and I’m cheering for you!"
+    ]
+  },
+  "facts": {
+    "keywords": ["fact", "did you know", "tell me something"],
+    "responses": [
+      "Did you know honey never expires? Archaeologists found pots of it in Egyptian tombs still good to eat!",
+      "Octopuses have three hearts and blue blood — nature is wild 🐙",
+      "Bananas are berries, but strawberries aren’t!",
+      "The Eiffel Tower grows taller in summer — metal expands in the heat!"
+    ]
+  },
+  "farewell": {
+    "keywords": ["bye", "goodnight", "see you", "later"],
+    "responses": [
+      "Bye! Don’t forget to smile today 😊",
+      "See you later! I’ll be right here waiting for our next chat 💬",
+      "Goodnight 🌙 dream big and stay curious.",
+      "Bye for now! Keep being awesome!"
+    ]
+  }
+}

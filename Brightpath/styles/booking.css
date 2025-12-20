@@ -1,0 +1,321 @@
+/* ================= RESET & BASE ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #333;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ================= HEADER ================= */
+header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+.logo .bright { color: #7ec8e3; font-weight: bold; font-size: 1.2rem; }
+.logo .path { color: #ffd24c; font-weight: bold; font-size: 1.2rem; }
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: #7ec8e3;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after { width: 100%; }
+
+.cta-btn, .btn-primary {
+  background: #7ec8e3;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover, .btn-primary:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* ================= BOOKING HERO ================= */
+.booking-hero {
+  padding: 60px 0;
+  text-align: center;
+  background: #f9fefb;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.booking-hero h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #007ea7;
+}
+
+.booking-hero p {
+  font-size: 16px;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ================= BOOKING FORM ================= */
+.booking-form-section {
+  padding: 50px 0;
+}
+
+form {
+  background: #fdfdfd;
+  padding: 40px 35px;
+  border-radius: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #7ec8e3;
+  box-shadow: 0 0 8px rgba(126,200,227,0.3);
+}
+
+/* ================= MODE CARDS ================= */
+.mode-cards {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.mode-card {
+  flex: 1;
+  min-width: 150px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+}
+
+.mode-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  border-color: #7ec8e3;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.mode-card.selected {
+  border-color: #7ec8e3;
+  background: #e6f7fb;
+}
+
+/* ================= DATE & TIME PICKERS ================= */
+input[type="date"], input[type="time"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="date"]:focus, input[type="time"]:focus {
+  border-color: #7ec8e3;
+  box-shadow: 0 0 8px rgba(126,200,227,0.3);
+}
+
+/* ================= SUBMIT BUTTON ================= */
+button[type="submit"] {
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 16px;
+  background: #7ec8e3;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* ================= BOOKING MESSAGE ================= */
+.booking-message {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #007ea7;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #007ea7;
+  color: #fff;
+  padding: 60px 40px;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-logo, .footer-links, .footer-contact {
+  flex: 1 1 250px;
+}
+
+.footer-logo img {
+  height: 50px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-contact p {
+  margin-bottom: 10px;
+}
+
+.social-icon {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .mode-cards {
+    flex-direction: column;
+  }
+
+  header .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 600px) {
+  .booking-hero h1 {
+    font-size: 28px;
+  }
+
+  .booking-hero p {
+    font-size: 14px;
+  }
+
+  form {
+    padding: 30px 20px;
+  }
+}

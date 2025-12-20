@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foundation Phase | BrightPath</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/foundation.css" />
+</head>
+<body>
+
+ 
+  <header>
+    <div class="container header-container">
+      <div class="logo" onclick="location.href='index.html'">
+        <img src="images/IMG-20251020-WA0029.jpg" alt="BrightPath Logo" class="logo-img" />
+        <span class="bright">Bright</span><span class="path">Path</span>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>   
+          <li><a href="#">About</a></li>
+          <li><a href="#">Transport Service</a></li>
+          <li><a href="episodes.html">Brighty's Adventures</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="tutors.html" class="cta-btn">Book a Tutor</a>
+      <div class="mobile-menu-icon">&#9776;</div>
+    </div>
+  </header>
+
+  
+  <section class="foundation-hero">
+    <div class="container">
+      <h1>Foundation Phase</h1>
+      <p>Grades 1–3 — building literacy, numeracy and life skills in a safe, playful and focused way.</p>
+    </div>
+  </section>
+
+
+  <section class="foundation-overview">
+    <div class="container">
+      <h2>What is the Foundation Phase?</h2>
+      <p>
+        The Foundation Phase focuses on essential early learning skills for children in Grades 1 to 3.
+        At BrightPath we combine fun activities with structured lessons to build reading, counting and social skills.
+        Our tutors use small group and one on one sessions so each learner gets the attention they need.
+      </p>
+    </div>
+  </section> 
+
+  
+  <section class="foundation-subjects">
+    <div class="container">
+      <h2>Subjects we cover</h2>
+      <p class="subtext">Click a subject to see tutors who teach it</p>
+
+      <div class="subjects-grid">
+        <button class="subject-card" data-subject="english">
+          <div class="icon">📝</div>
+          <h3>English Home Language</h3>
+          <p>Reading, writing and early comprehension activities</p>
+        </button>
+
+        <button class="subject-card" data-subject="mathematics">
+          <div class="icon">🔢</div>
+          <h3>Mathematics</h3>
+          <p>Counting, shapes, basic problem solving and number sense</p>
+        </button>
+
+        <button class="subject-card" data-subject="lifeskills">
+          <div class="icon">🌍</div>
+          <h3>Life Skills</h3>
+          <p>Social, emotional and physical development through play and guided tasks</p>
+        </button>
+
+        <button class="subject-card" data-subject="creative">
+          <div class="icon">🎨</div>
+          <h3>Creative Arts</h3>
+          <p>Drawing, music and craft to build expression and fine motor skills</p>
+        </button>
+      </div>
+
+      
+      <div id="tutors-wrapper" class="tutors-wrapper hidden">
+        <div class="tutors-header">
+          <h3 id="tutors-title">Tutors</h3>
+          <button id="close-tutors" class="close-btn">Close</button>
+        </div>
+        <div id="tutors-grid" class="tutors-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to start your BrightPath journey?</h2>
+      <a href="tutors.html" class="btn-primary">Book a Session</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-logo">
+        <img src="images/IMG-20251020-WA0029.jpg" alt="BrightPath Logo" class="logo-img">
+        <span class="bright">Bright</span><span class="path">Path</span>
+        <p>Guiding learners to success</p>
+        <p class="designed-by">Designed by WebCrate</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="tutors.html">Tutors</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: brightpathaftercare@gmail.com</p>
+        <p>Phone: 084 532 5730</p>
+        <a href="https://www.instagram.com/brightpathaftercare?igsh=c2xjYW44cWVueXZn" target="_blank">
+          <img src="images/instagram.png" alt="Instagram" class="social-icon" />
+        </a>
+        <a href="https://wa.me/27845325730" target="_blank">
+          <img src="images/whatsapp.png" alt="WhatsApp" class="social-icon" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/foundation.js"></script>  
+</body>
+</html>   
