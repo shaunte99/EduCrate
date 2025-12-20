@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url("../images/EduHero.png") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.center-box {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  animation: fadeIn 1.3s ease forwards;
+  width: 320px;
+  background: rgba(0,0,0,0.45);
+  padding: 40px 30px;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 2.2rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.edu {
+  color: #ffd417; /* dark blue */
+}
+
+.crate {
+  color: #ffd417; /* yellow accent */
+}
+
+.welcome-text {
+  font-size: 1.4rem;
+  margin: 20px 0;
+  font-weight: 500;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: #333;
+}
+
+.login-btn {
+  padding: 12px;
+  border-radius: 8px;
+  background: #FFCC00;
+  color: #000;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #e6b800;
+  transform: scale(1.05);
+}
+
+.error-msg {
+  color: #FF5555;
+  font-weight: 500;
+  font-size: 0.9rem;
+  height: 18px;
+  margin-top: 4px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

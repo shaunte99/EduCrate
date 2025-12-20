@@ -6,7 +6,7 @@ body {
   background: #fff;
 }
 
-/* Hero / Login Section */
+/* Background Hero */
 .login-hero {
   position: relative;
   height: 100vh;
@@ -20,73 +20,150 @@ body {
 
 .login-hero .overlay {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.6);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(4px);
 }
 
+/* Login Card */
 .login-container {
   position: relative;
-  z-index: 1;
-  background: rgba(255,255,255,0.95);
-  padding: 3rem 2rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  z-index: 2;
   width: 100%;
-  max-width: 400px;
+  max-width: 420px;
+  padding: 2.5rem 2rem;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.25);
   text-align: center;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeUp 0.8s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .login-container h1 {
-  margin-bottom: 10px;
-  font-size: 2.2rem;
+  margin-bottom: 8px;
+  font-size: 2.3rem;
   color: #0A1F44;
+  font-weight: 700;
 }
 
-.login-container .subtitle {
-  margin-bottom: 20px;
+.subtitle {
   font-size: 1rem;
+  margin-bottom: 18px;
   color: #333;
 }
 
-.login-container form input {
+/* Perfect Input Center Fix */
+form {
   width: 100%;
-  padding: 12px 15px;
-  margin-bottom: 15px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers all inputs inside */
+}
+
+.input-group {
+  width: 100%;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  background: white;
   font-size: 1rem;
+  outline: none;
+  transition: 0.25s ease;
+
+  box-sizing: border-box; /* stops spilling */
 }
 
-.login-container .btn.filled {
-  background-color: #FFCC00;
-  color: #000;
-  border: none;
-  padding: 12px 20px;
+input:focus {
+  border-color: #0A1F44;
+  box-shadow: 0 0 10px rgba(10,31,68,0.3);
+}
+
+/* Button */
+.btn.filled {
   width: 100%;
-  font-weight: 600;
-  border-radius: 6px;
+  padding: 14px 20px;
+  background: #FFCC00;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: 0.25s ease;
 }
 
-.login-container .btn.filled:hover {
-  background-color: #e6b800;
+.btn.filled:hover {
+  background: #e2b600;
+  transform: scale(1.02);
 }
 
+/* Back link */
 .back-link {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .back-link a {
   text-decoration: none;
   color: #0A1F44;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .error-msg {
   color: red;
-  font-size: 12px;
-  margin-top: -12px;
+  font-size: 13px;
+  margin-top: -10px;
   margin-bottom: 10px;
+}
+
+/* Toto Widget */
+.toto-widget {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.toto-avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+
+.toto-bubble {
+  background: white;
+  padding: 12px 14px;
+  border-radius: 14px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  font-size: 0.9rem;
+  max-width: 180px;
+  animation: bubbleSlide 0.5s ease;
+}
+
+@keyframes bubbleSlide {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
 }

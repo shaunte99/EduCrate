@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const emailInput = form.email;
 
   form.addEventListener('submit', function (e) {
-    e.preventDefault(); // Prevent default submission
+    e.preventDefault();
     clearErrors();
-      
+
     let valid = true;
 
     if (studentIdInput.value.trim().length < 4) {
@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const studentId = studentIdInput.value.trim();
     const email = emailInput.value.trim().toLowerCase();
 
-    // Add more students here as needed
     const studentData = [
       {
         id: 'KAYLA1022',
@@ -34,13 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const match = studentData.find(
-      student => student.id === studentId && student.email === email
+      s => s.id === studentId && s.email === email
     );
 
     if (match) {
       window.location.href = match.profilePage;
     } else {
-      alert('❌ Incorrect ID or email. Please try again.');
+      alert('Incorrect ID or email. Please try again.');
     }
   });
 
@@ -48,20 +47,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const error = document.createElement('p');
     error.className = 'error-msg';
     error.textContent = message;
-    error.style.color = 'red';
-    error.style.fontSize = '12px';
-    error.style.marginTop = '-12px';
-    error.style.marginBottom = '10px';
     input.parentNode.insertBefore(error, input.nextSibling);
   }
 
   function clearErrors() {
-    const errors = document.querySelectorAll('.error-msg');
-    errors.forEach(e => e.remove());
+    document.querySelectorAll('.error-msg').forEach(e => e.remove());
   }
 
   function validateEmail(email) {
     return /^\S+@\S+\.\S+$/.test(email);
   }
+
+  // TOTO WIDGET
+  const toto = document.getElementById('totoWidget');
+  const bubble = document.querySelector('.toto-bubble');
+
+  toto.addEventListener('click', () => {
+    bubble.textContent = "If the login doesn't work, make sure your ID and email match exactly.";
+  });
 });
 
