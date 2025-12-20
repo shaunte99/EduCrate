@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EduCrate Research — AI-Driven Learning Disability Detection</title>
+  <link rel="stylesheet" href="styles/research.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="images/eedu.png" alt="EduCrate logo" class="brand-img">
+        <div class="brand-text">
+          <h1>EduCrate Research</h1>
+          <p class="tag">AI-Driven Learning Disability Detection Framework</p>
+        </div>
+      </div>
+
+      <nav class="mini-nav" aria-label="Page">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="screening.html" class="nav-link">Assessment Tests</a>
+        <a href="academics.html" class="nav-link">Curricular</a>
+        <a href="#toc" class="nav-link">Contents</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <!-- TOC / Quick nav -->
+    <aside id="toc" class="toc" aria-label="Table of contents">
+      <h3>Contents</h3>
+      <ol>
+        <li><a href="#introduction">1. Introduction</a></li>
+        <li><a href="#understanding">2. Understanding LD</a></li>
+        <li><a href="#framework">3. Detection Framework</a></li>
+        <li><a href="#pipeline">4. Screening Pipeline</a></li>
+        <li><a href="#validation">5. Validation</a></li>
+        <li><a href="#post">6. Post-Detection Support</a></li>
+        <li><a href="#ethics">7. Ethics & Privacy</a></li>
+        <li><a href="#future">8. R&D</a></li>
+        <li><a href="#lrp-demo">LRP Demo</a></li>
+      </ol>
+
+      <div class="toc-actions">
+        <button id="collapse-all" class="btn small">Collapse All</button>
+        <a href="#" id="download-pdf" class="btn small outline">Download PDF</a>
+      </div>
+    </aside>
+
+    <section class="paper">
+      <!-- Intro -->
+      <article id="introduction" class="paper-section">
+        <header class="section-header">
+          <h2>1. Introduction</h2>
+          <button class="toggle-btn" aria-expanded="true">Hide</button>
+        </header>
+        <div class="section-body">
+          <p>Across South Africa, thousands of learners experience persistent academic struggles not because they lack potential, but because their learning disabilities remain undetected. Conventional diagnostic systems rely on expensive psychologists, inconsistent teacher observations, and outdated assessments that exclude millions of children in low-resource environments.</p>
+
+          <p>EduCrate was founded to close that gap. Our mission is to make early learning disability detection accessible, data-driven, and built into every classroom experience — ensuring that no child is left behind due to undiagnosed barriers. EduCrate’s ecosystem integrates AI analytics, cognitive micro-assessments, and behavioral data to detect learning disabilities in real time, without requiring external specialists or relocation to special schools.</p>
+
+          <p>The goal is simple but transformative: to make inclusion automatic, intelligent, and continuous within every school environment.</p>
+        </div>
+      </article>
+
+      <!-- Understanding -->
+      <article id="understanding" class="paper-section">
+        <header class="section-header">
+          <h2>2. Understanding Learning Disabilities</h2>
+          <button class="toggle-btn" aria-expanded="true">Hide</button>
+        </header>
+        <div class="section-body">
+          <p>EduCrate’s detection framework is grounded in research from educational psychology, cognitive neuroscience, and developmental studies. Each learning disability affects a unique set of cognitive functions — such as memory, attention, language processing, or spatial reasoning — which can be measured digitally through specific learning interactions.</p>
+
+          <div class="ld-grid">
+            <div class="ld-card">
+              <h3>Dyslexia</h3>
+              <p><strong>Core deficit:</strong> Phonological processing and working memory.</p>
+              <p><strong>Digital signals:</strong> Frequent letter reversals, slow reading speed, irregular reading timing, repeated spelling errors.</p>
+              <p class="tool">Tool: AI Reading Tracker & Word Pattern Analyzer</p>
+            </div>
+
+            <div class="ld-card">
+              <h3>Dyscalculia</h3>
+              <p><strong>Core deficit:</strong> Number sense and visual-spatial reasoning.</p>
+              <p><strong>Digital signals:</strong> Place value errors, slow response on timed math tasks, difficulty with patterns.</p>
+              <p class="tool">Tool: Adaptive Math Diagnostic</p>
+            </div>
+
+            <div class="ld-card">
+              <h3>Dysgraphia</h3>
+              <p><strong>Core deficit:</strong> Fine motor coordination and written expression.</p>
+              <p><strong>Digital signals:</strong> Irregular typing rhythm, inconsistent spacing, disorganized sentence structure.</p>
+              <p class="tool">Tool: AI Writing Analyzer</p>
+            </div>
+
+            <div class="ld-card">
+              <h3>ADHD</h3>
+              <p><strong>Core deficit:</strong> Executive function and attention.</p>
+              <p><strong>Digital signals:</strong> Inconsistent engagement, task abandonment, fluctuating accuracy.</p>
+              <p class="tool">Tool: Attention Consistency Tracker</p>
+            </div>
+
+            <div class="ld-card">
+              <h3>Auditory & Visual Processing</h3>
+              <p><strong>Core deficit:</strong> Sensory decoding.</p>
+              <p><strong>Digital signals:</strong> Difficulty with audio instructions; mismatch between visual and auditory performance.</p>
+              <p class="tool">Tool: Dual-Mode Sensory Assessment</p>
+            </div>
+
+            <div class="ld-card">
+              <h3>Memory-Based Difficulties</h3>
+              <p><strong>Core deficit:</strong> Working & long-term memory retention.</p>
+              <p><strong>Digital signals:</strong> Rapid forgetting, inconsistent recall, difficulty applying old concepts.</p>
+              <p class="tool">Tool: Memory Retention Monitor</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Detection Framework -->
+      <article id="framework" class="paper-section">
+        <header class="section-header">
+          <h2>3. EduCrate’s Detection Framework</h2>
+          <button class="toggle-btn" aria-expanded="true">Hide</button>
+        </header>
+        <div class="section-body">
+          <h4>3.1 Data Collection</h4>
+          <p>The system collects behavioral and cognitive performance data from three main sources: digital interaction data, teacher input, and parent insights.</p>
+
+          <h4>3.2 AI & ML Model</h4>
+          <p>EduCrate’s AI continuously learns from user patterns, comparing each learner’s data to population baselines and flagging statistical outliers.</p>
+
+          <h4>3.3 Risk Profiling</h4>
+          <p>Each learner is assigned a Learning Risk Profile (LRP) with Low / Moderate / High levels that feed into Personalized Learning Plans.</p>
+        </div>
+      </article>
+
+      <!-- Screening Pipeline -->
+      <article id="pipeline" class="paper-section">
+        <header class="section-header">
+          <h2>4. Screening Pipeline</h2>
+          <button class="toggle-btn" aria-expanded="true">Hide</button>
+        </header>
+        <div class="section-body">
+          <p>EduCrate’s screening pipeline ensures early and accurate action. Below is an interactive pipeline you can click to explore each stage.</p>
+
+          <div class="pipeline">
+            <div class="stage" data-stage="1">
+              <div class="stage-index">1</div>
+              <div class="stage-body">
+                <h5>Baseline Screening</h5>
+                <p>Automated during the first month of activity.</p>
+              </div>
+            </div>
+
+            <div class="stage" data-stage="2">
+              <div class="stage-index">2</div>
+              <div class="stage-body">
+                <h5>Continuous Monitoring</h5>
+                <p>Weekly data updates from assignments and behavior tracking.</p>
+              </div>
+            </div>
+
+            <div class="stage" data-stage="3">
+              <div class="stage-index">3</div>
+              <div class="stage-body">
+                <h5>Teacher Confirmation</h5>
+                <p>Teachers verify flagged profiles via quick checklists.</p>
+              </div>
+            </div>
+
+            <div class="stage" data-stage="4">
+              <div class="stage-index">4</div>
+              <div class="stage-body">
+                <h5>Parent Insight Integration</h5>
+                <p>Parents add observations through the EduCrate app.</p>
+              </div>
+            </div>
+
+            <div class="stage" data-stage="5">
+              <div class="stage-index">5</div>
+              <div class="stage-body">
+                <h5>AI Risk Evaluation</h5>
+                <p>Algorithm combines inputs to calculate a likelihood score.</p>
+              </div>
+            </div>
+
+            <div class="stage" data-stage="6">
+              <div class="stage-index">6</div>
+              <div class="stage-body">
+                <h5>PLP Activation</h5>
+                <p>A personalized plan generates classroom strategies and digital supports.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- Validation -->
+      <article id="validation" class="paper-section">
+        <header class="section-header">
+          <h2>5. Validation & Research Alignment</h2>
+          <button class="toggle-btn" aria-expanded="true">Hide</button>
+        </header>
+        <div class="section-body">
+          <p>EduCrate aligns with RTI, DSM-5, ICD-11 and South Africa's SIAS policy. Pilots and university partnerships will validate accuracy and cultural adaptation.</p>
+
+          <div class="badges">
+            <span class="badge">RTI</span>
+            <span class="badge">DSM-5</span>
+            <span class="badge">ICD-11</span>
+            <span class="badge">POPIA-Compliant</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Post Detection Support -->
+      <article id="post" class="paper-section">
+        <header class="section-header">
+          <h2>6. Post-Detection Support Integration</h2>
+          <button class="toggle-btn" aria-expanded="true">Hide</button>
+        </header>
+        <div class="section-body">
+          <p>PLPs adapt the learner experience, teachers get tailored classroom strategies, parents receive home activities, and administrators see inclusion metrics.</p>
+        </div>
+      </article>
+
+      <!-- Ethics -->
+      <article id="ethics" class="paper-section">
+        <header class="section-header">
+          <h2>7. Ethical Data Use & Privacy</h2>
+          <button class="toggle-btn" aria-expanded="true">Hide</button>
+        </header>
+        <div class="section-body">
+          <p>EduCrate adheres to POPIA and international research ethics. Data is anonymized for research use and securely stored under institutional agreements.</p>
+        </div>
+      </article>
+
+      <!-- Future R&D -->
+      <article id="future" class="paper-section">
+        <header class="section-header">
+          <h2>8. Future Research & Development</h2>
+          <button class="toggle-btn" aria-expanded="true">Hide</button>
+        </header>
+        <div class="section-body">
+          <ul>
+            <li>Eye-Tracking Simulations</li>
+            <li>Speech Analysis Tools</li>
+            <li>Cognitive Load Monitors</li>
+            <li>NeuroPartner Network collaborations</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- LRP Demo -->
+      <article id="lrp-demo" class="paper-section">
+        <header class="section-header">
+          <h2>LRP Demo — Try a quick risk check</h2>
+        </header>
+        <div class="section-body">
+          <p>Enter a few simple signals and get an example Learning Risk Profile. This is a demo; replace later with actual model output.</p>
+
+          <form id="lrpForm" class="lrp-form">
+            <label><input type="checkbox" name="slowReading"> Frequent slow reading / decoding errors</label>
+            <label><input type="checkbox" name="mathErrors"> Consistent math place-value errors</label>
+            <label><input type="checkbox" name="inconsistentEngagement"> Inconsistent engagement / task abandonment</label>
+            <label><input type="checkbox" name="memoryForgetting"> Rapid forgetting of learned material</label>
+
+            <div class="lrp-actions">
+              <button type="button" id="lrp-calc" class="btn filled">Calculate LRP</button>
+              <button type="button" id="lrp-reset" class="btn outline">Reset</button>
+            </div>
+
+            <div id="lrp-result" class="lrp-result" aria-live="polite"></div>
+          </form>
+        </div>
+      </article>
+
+      <!-- Conclusion -->
+      <article id="conclusion" class="paper-section">
+        <header class="section-header">
+          <h2>Conclusion</h2>
+        </header>
+        <div class="section-body">
+          <p>EduCrate’s detection model represents a shift from reactive to proactive education. Through continuous monitoring, AI analysis, and inclusive design, EduCrate ensures learning differences are identified and supported early.</p>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>EduCrate</strong> — Smart School Systems
+        <div class="small"></div>
+      </div>
+      <div class="small">© 2025 EduCrate • Designed by WebCrate</div>
+    </div>
+  </footer>
+
+  <!-- Toto AI widget (shared across pages) -->
+  <div class="toto-widget" id="totoWidgetPage">
+    <img class="toto-avatar" id="totoOpen" src="images/toto.png" alt="Toto AI">
+    <div class="toto-chat" id="totoChat">
+      <div class="toto-header">
+        <strong>Toto AI</strong>
+        <button class="close" id="totoClose" aria-label="Close">×</button>
+      </div>
+      <div class="toto-body" id="totoBody">
+        <div class="toto-msg bot">Hi — I can explain the framework or demo the LRP. Try typing "explain LRP".</div>
+      </div>
+      <div class="toto-footer">
+        <input id="totoInputPage" placeholder="Ask Toto..." />
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/research.js"></script>
+</body>
+</html>

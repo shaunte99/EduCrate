@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EduCrate Screening — Assessments</title>
+  <link rel="stylesheet" href="styles/screening.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="sc-header">
+  <div class="container header-inner">
+
+    <div class="brand brand-dual">
+      <div class="brand-logos">
+        <img src="images/eedu.png" alt="EduCrate" class="brand-img">
+        <img src="images/brightpath.jpg" alt="BrightPath" class="brand-img second-logo">
+      </div>
+
+      <div class="brand-text">
+        <div class="brand-title">EduCrate × BrightPath</div>
+        <div class="brand-sub">Joint Educational Screening Suite</div>
+      </div>
+    </div>
+
+    <nav class="mini-nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="screening.html" class="nav-link active">Screening</a>
+      <a href="research.html" class="nav-link">Research</a>
+    </nav>
+
+  </div>
+</header>
+
+
+  <main class="container page">
+    <section class="selector">
+      <h2>Select Phase & Test</h2>
+      <div class="phase-tabs">
+        <button class="phase-btn active" data-phase="foundation">Foundation Phase</button>
+        <button class="phase-btn" data-phase="intermediate">Intermediate Phase</button>
+      </div>
+
+      <div id="testsList" class="tests-list">
+        <!-- populated by JS -->
+      </div>
+    </section>
+
+    <!-- Modal / Test runner -->
+    <div id="testModal" class="test-modal" aria-hidden="true">
+      <div class="modal-content">
+        <header class="modal-header">
+          <div>
+            <strong id="testTitle">Test</strong>
+            <div id="testDomain" class="muted">Domain</div>
+          </div>
+          <button id="closeTest" class="btn small outline">Exit</button>
+        </header>
+
+        <div class="progress-wrap">
+          <div id="progressBar" class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+          <div id="progressText" class="muted small">0 / 0</div>
+        </div>
+
+        <form id="questionForm" class="question-area" autocomplete="off">
+          <!-- question content injected here -->
+        </form>
+
+        <div class="modal-actions">
+          <button id="prevBtn" class="btn outline">Back</button>
+          <button id="nextBtn" class="btn filled">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results area -->
+    <section id="resultsSection" class="results-section" hidden>
+      <h2>Assessment Report</h2>
+      <div id="reportArea"></div>
+      <div class="results-actions">
+        <button id="saveLocal" class="btn outline">Save Locally</button>
+        <button id="restartBtn" class="btn filled">Run Another Test</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Toto widget -->
+  <div class="toto-widget" id="totoWidget">
+    <img id="totoOpen" class="toto-avatar" src="images/toto.png" alt="Toto">
+    <div id="totoChat" class="toto-chat" hidden>
+      <div class="toto-header">
+        <strong>Toto AI</strong>
+        <button id="totoClose" class="close">×</button>
+      </div>
+      <div id="totoBody" class="toto-body">
+        <div class="toto-msg bot">Ask me for help with the test or type "scoring" to understand the diagnosis logic.</div>
+      </div>
+      <div class="toto-footer">
+        <input id="totoInput" placeholder="Ask Toto..." />
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div><strong>EduCrate</strong> • Screening • © 2025</div>
+      <div class="small">Contact: research@educrate.com</div>
+    </div>
+  </footer>
+
+  <script src="scripts/screening.js"></script>
+</body>
+</html>
+

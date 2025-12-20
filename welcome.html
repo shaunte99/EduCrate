@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to EduCrate</title>
+  <link rel="stylesheet" href="styles/welcome.css">
+</head>
+<body>
+
+  <div class="overlay"></div>
+
+  <div class="center-box">
+    <div class="logo-wrapper">
+      <img src="images/eedu.png" alt="EduCrate Logo" class="logo-img">
+      <h1 class="title"><span class="edu">Edu</span><span class="crate">Crate</span></h1>
+    </div>
+
+    <h2 class="welcome-text">Welcome to EduCrate</h2>
+
+    <form id="login-form">
+      <input type="email" placeholder="Username" id="username" required>
+      <input type="password" placeholder="Password" id="password" required>
+      <button type="submit" class="login-btn">Login</button>
+      <p class="error-msg" id="error-msg"></p>
+    </form>
+  </div>
+
+  <script src="scripts/welcome.js"></script>
+</body>
+</html>

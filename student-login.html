@@ -9,21 +9,38 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
+
 <body>
-  <!-- Hero / Login Section -->
+
+  <!-- Login Section -->
   <section class="login-hero">
     <div class="overlay"></div>
-    <div class="login-container">
+
+    <div class="login-container animate">
       <h1>Find My Student</h1>
       <p class="subtitle">Enter the student ID and shared email address</p>
+
       <form id="loginForm" novalidate>
-        <input type="text" name="studentId" placeholder="Student ID" required />
-        <input type="email" name="email" placeholder="Shared Email" required />
+        <div class="input-group">
+          <input type="text" name="studentId" placeholder="Student ID" required />
+        </div>
+
+        <div class="input-group">
+          <input type="email" name="email" placeholder="Shared Email" required />
+        </div>
+
         <button type="submit" class="btn filled">Find My Student</button>
       </form>
+
       <p class="back-link"><a href="index.html">← Back to Home</a></p>
     </div>
   </section>
+
+  <!-- TOTO AI BUBBLE -->
+  <div class="toto-widget" id="totoWidget">
+    <img src="images/toto.png" alt="Toto" class="toto-avatar">
+    <div class="toto-bubble">Hey there. Need help logging in?</div>
+  </div>
 
   <script src="scripts/student-login.js"></script>
 </body>
